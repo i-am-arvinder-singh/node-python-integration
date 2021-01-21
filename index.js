@@ -20,7 +20,9 @@ app.get('/', (req, res) => {
     python.on('close', (code) => {
         console.log(`child process close all stdio with code ${code}`);
         // send data to browser
-        var output = dataToSend.split(" ").slice(5).filter(Boolean)
+        var output;
+        if(dataToSend) output = dataToSend.split(" ").slice(5).filter(Boolean);
+        else output = "";
         res.send(output)
     });
     
