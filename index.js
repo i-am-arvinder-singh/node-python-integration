@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
         console.log(`child process close all stdio with code ${code}`);
         // send data to browser
         var output;
-        if(dataToSend) output = dataToSend.split(" ").slice(5).filter(Boolean);
+        if(dataToSend) output = dataToSend.split(" ").slice(4).filter(Boolean);
         else output = "";
         res.send(output)
     });

@@ -59,6 +59,7 @@ classes = tuple(classes)
 
 
 
+
 # @app.route('/predict',methods=['POST'])
 
 # load the test image
