@@ -69,7 +69,7 @@ if not os.access(img_name, os.W_OK):
     img_url = sys.argv[1] #"https://farm4.staticflickr.com/3609/3460002981_9121bb0695.jpg"
     img_name = wget.download(img_url)
 
-img = Image.open(img_name)
+img = Image.open(img_name).convert('RGB')
 input_img = V(centre_crop(img).unsqueeze(0))
 
 # forward pass
